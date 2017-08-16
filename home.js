@@ -1,5 +1,6 @@
 let welcome = require('./welcome');
 
-console.log('works');
-debugger;
-welcome("Anton23");
+const env = NODE_ENV;
+
+console.log('env:', env);
+welcome("Anton");

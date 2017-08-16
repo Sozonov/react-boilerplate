@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = () => NODE_ENV === 'development';
 
@@ -12,5 +14,9 @@ module.exports = {
         aggregateTimeout: 100
     },
     
-    devtool: isDev() ? "eval" : "source-map"   // eval для dev, source-map - для prod
+    devtool: isDev() ? "eval" : "source-map",   // eval для dev, source-map - для prod
+
+    plugins: [
+        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV) })
+    ]
 };
