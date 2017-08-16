@@ -1,0 +1,1 @@
+export default () => document.write("<div>atom2</div>");

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": "./src/ui"
+  },
+  "exclude": [
+    "node_modules", "build"
+  ]
+}

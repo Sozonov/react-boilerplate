@@ -1,1 +1,0 @@
-export default name => console.log(`Alloha, ${name}`);

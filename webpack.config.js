@@ -5,7 +5,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = () => NODE_ENV === 'development';
 
 module.exports = {
-    entry: "./home",
+    entry: "./src/home",
     output: {
         path: __dirname + "/build",
         filename: "build.js"
@@ -13,10 +13,10 @@ module.exports = {
 
     resolve:{
         alias: {
-            ui: path.resolve(__dirname, 'ui'),
-            atoms: path.resolve(__dirname, 'ui/atoms'),
-            molecules: path.resolve(__dirname, 'ui/molecules'),
-          }
+            ui: path.resolve(__dirname, 'src/ui'),
+            atoms: path.resolve(__dirname, 'src/ui/atoms'),
+            molecules: path.resolve(__dirname, 'src/ui/molecules')
+        }
     },
 
     watch: isDev(),
