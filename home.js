@@ -1,6 +1,6 @@
-let welcome = require('./welcome');
+import welcome from './welcome';
+import molecule1 from 'molecules/molecule1';
 
 const env = NODE_ENV;
 
-console.log('env:', env);
-welcome("Anton");
+molecule1();

@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+var path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = () => NODE_ENV === 'development';
@@ -9,6 +10,15 @@ module.exports = {
         path: __dirname + "/build",
         filename: "build.js"
     },
+
+    resolve:{
+        alias: {
+            ui: path.resolve(__dirname, 'ui'),
+            atoms: path.resolve(__dirname, 'ui/atoms'),
+            molecules: path.resolve(__dirname, 'ui/molecules'),
+          }
+    },
+
     watch: isDev(),
     watchOptions: {
         aggregateTimeout: 100
@@ -18,5 +28,11 @@ module.exports = {
 
     plugins: [
         new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV) })
-    ]
+    ],
+
+    module: {
+        loaders: [
+            {test: /\.js$/, loader: 'babel-loader'}
+        ]
+    }
 };
