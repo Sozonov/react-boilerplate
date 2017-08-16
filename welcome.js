@@ -1,1 +1,1 @@
-module.exports = name => alert(`Hello, ${name}`);
+module.exports = name => console.log(`Hello, ${name}`);
