@@ -37,7 +37,7 @@ const cfg = merge(config, {
         new AssetsPlugin({path: BUILD_DIR, filename: 'assets.json'}),
     ],
 
-    devtool: "source-map"
+    devtool: false       //"source-map"
 })
 
 module.exports = cfg;
