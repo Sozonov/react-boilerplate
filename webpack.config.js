@@ -15,10 +15,14 @@ if (!isDev()){
 }
 
 module.exports = {
-    entry: "./src/home",
+    context: __dirname + "/src",
+    entry: { 
+        home: "./main",
+        admin: "./admin"
+    },
     output: {
         path: __dirname + "/build",
-        filename: "build.js"
+        filename: "[name].js"
     },
 
     resolve:{
