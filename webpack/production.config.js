@@ -1,43 +1,45 @@
-const webpack = require('webpack');
-var path = require('path');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var AssetsPlugin = require('assets-webpack-plugin');
-const merge = require('webpack-merge');
+const webpack = require('webpack')
+const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const AssetsPlugin = require('assets-webpack-plugin')
+const merge = require('webpack-merge')
 
-const { config, BUILD_DIR } = require('./shared.config');
+const { config, BUILD_DIR, SRC_DIR } = require('./shared.config')
+
 
 const cfg = merge(config, {
-    
-    profile: true,
-    cache: false,
-    watch: false,
-    stats: {
-        assets: true,
-        chunks: false,
-        chunkModules: false,
-        modules: false,
-        reasons: false,
-        source: false,
-    },
 
-    entry: {
-        main: ['babel-polyfill', "./main"],
-        admin: ['babel-polyfill', "./admin"],
-    },
+  profile: true,
+  cache: false,
+  watch: false,
+  stats: {
+    assets: true,
+    chunks: false,
+    chunkModules: false,
+    modules: false,
+    reasons: false,
+    source: false,
+  },
 
-    performance: {
-        hints: 'error',
-        maxAssetSize: 500000,
-        maxEntrypointSize: 1000000,
-    },
+  entry: {
+    main: ['babel-polyfill', './main'],
+    admin: ['babel-polyfill', './admin'],
+  },
 
-    plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(true),
-        new UglifyJsPlugin({ compress: { warnings: false }, sourceMap: true }),
-        new AssetsPlugin({path: BUILD_DIR, filename: 'assets.json'}),
-    ],
+  performance: {
+    hints: 'error',
+    maxAssetSize: 500000,
+    maxEntrypointSize: 1000000,
+  },
 
-    devtool: false       //"source-map"
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new UglifyJsPlugin({ compress: { warnings: false }, sourceMap: true }),
+    new AssetsPlugin({ path: BUILD_DIR, filename: 'assets.json' }),
+
+  ],
+
+  devtool: false, // "source-map"
 })
 
-module.exports = cfg;
+module.exports = cfg

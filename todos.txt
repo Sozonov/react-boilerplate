@@ -1,6 +1,6 @@
+* Вынести библиотеки (react, recompose, ...) в отдельный vendor.js файл. Пока компиляция занимает 1.5 сек
 * Sass с выносом в css файл
 * SVG
 * Шрифты
-* Вынести библиотеки (react, recompose, ...) в отдельный vendor.js файл
 * HMR
 * SPA, Router (сделать, чтоб webpack dev server отдавал всегда index.html)

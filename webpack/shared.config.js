@@ -41,6 +41,10 @@ const config = {
       chunks: ['admin'],
       title: 'Admin page',
     }),
+    new webpack.DllReferencePlugin({
+      context: SRC_DIR,
+      manifest: require('./../dll/vendor-manifest.json'),   // eslint-disable-line
+    }),
   ],
 
   module: {
