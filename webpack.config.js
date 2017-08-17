@@ -1,8 +1,18 @@
 const webpack = require('webpack');
 var path = require('path');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = () => NODE_ENV === 'development';
+
+
+const plugins = [
+    new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV) }),
+];
+if (!isDev()){
+    plugins.push(new UglifyJsPlugin({ compress: { warnings: false } }))    
+}
 
 module.exports = {
     entry: "./src/home",
@@ -26,9 +36,7 @@ module.exports = {
     
     devtool: isDev() ? "eval" : "source-map",   // eval для dev, source-map - для prod
 
-    plugins: [
-        new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV) })
-    ],
+    plugins,
 
     module: {
         loaders: [
