@@ -11,7 +11,7 @@ const plugins = [
     new webpack.DefinePlugin({NODE_ENV: JSON.stringify(NODE_ENV) }),
 ];
 if (!isDev()){
-    plugins.push(new UglifyJsPlugin({ compress: { warnings: false } }))    
+    plugins.push(new UglifyJsPlugin({ compress: { warnings: false }, sourceMap: true }))    
 }
 
 module.exports = {
@@ -34,7 +34,7 @@ module.exports = {
         aggregateTimeout: 100
     },
     
-    devtool: isDev() ? "eval" : "source-map",   // eval для dev, source-map - для prod
+    devtool: isDev() ? "cheap-eval-source-map" : "source-map",   // eval для dev, source-map - для prod
 
     plugins,
 
