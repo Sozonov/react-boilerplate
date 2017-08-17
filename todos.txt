@@ -1,5 +1,6 @@
 * Sass с выносом в css файл
+* SVG
 * Шрифты
-* Вынести библиотеки (react, ramda, ...) в отдельный vendor.js файл
+* Вынести библиотеки (react, recompose, ...) в отдельный vendor.js файл
 * HMR
-* Хэши в билд файлах ([name].[chunkhash].js) + генерация json с хэшами или генерация html
+* SPA, Router (сделать, чтоб webpack dev server отдавал всегда index.html)

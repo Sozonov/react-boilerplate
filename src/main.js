@@ -1,8 +1,10 @@
-import molecule1 from 'molecules/molecule1';
-import atom from 'atoms/atom2';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const env = NODE_ENV;
+import App from './app'
 
-molecule1();
-console.log('ok')
-atom();
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+)
