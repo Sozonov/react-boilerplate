@@ -3,8 +3,8 @@ const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const AssetsPlugin = require('assets-webpack-plugin')
 const merge = require('webpack-merge')
-
-const { config, BUILD_DIR, SRC_DIR } = require('./shared.config')
+const { config } = require('./shared.config')
+const { BUILD_DIR, SRC_DIR } = require('./consts.js')
 
 
 const cfg = merge(config, {
@@ -36,7 +36,6 @@ const cfg = merge(config, {
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({ compress: { warnings: false }, sourceMap: true }),
     new AssetsPlugin({ path: BUILD_DIR, filename: 'assets.json' }),
-
   ],
 
   devtool: false, // "source-map"

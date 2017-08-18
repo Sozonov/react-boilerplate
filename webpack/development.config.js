@@ -4,7 +4,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const AssetsPlugin = require('assets-webpack-plugin')
 const merge = require('webpack-merge')
 
-const { config, BUILD_DIR } = require('./shared.config')
+const { config } = require('./shared.config')
+const { BUILD_DIR } = require('./consts.js')
 
 
 module.exports = merge(config, {

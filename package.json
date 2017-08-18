@@ -5,7 +5,8 @@
   "main": "home.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "build-dll": "cross-env NODE_ENV=production webpack --config webpack/dll.config.js"
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -13,6 +14,7 @@
     "recompose": "^0.25.0"
   },
   "devDependencies": {
+    "add-asset-html-webpack-plugin": "^2.1.1",
     "assets-webpack-plugin": "^3.5.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",

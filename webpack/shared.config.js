@@ -2,11 +2,13 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
+
+const { BUILD_DIR, SRC_DIR } = require('./consts.js')
 
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const SRC_DIR = `${__dirname}./../src`
-const BUILD_DIR = `${__dirname}./../build`
+
 
 const config = {
   context: SRC_DIR,
@@ -31,12 +33,6 @@ const config = {
     new CleanWebpackPlugin(['build'], { root: `${BUILD_DIR}./..` }),
     new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      chunks: ['main'],
-      title: 'Main page',
-      template: `${SRC_DIR}/template.html`,
-    }),
-    new HtmlWebpackPlugin({
       filename: 'admin.html',
       chunks: ['admin'],
       title: 'Admin page',
@@ -44,6 +40,16 @@ const config = {
     new webpack.DllReferencePlugin({
       context: SRC_DIR,
       manifest: require('./../dll/vendor-manifest.json'),   // eslint-disable-line
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['main'],
+      title: 'Main page',
+      template: `${SRC_DIR}/template.html`,
+    }),
+    new AddAssetHtmlPlugin({
+      filepath: `${BUILD_DIR}/../dll/vendor.*.js`,
+      includeSourcemap: false,
     }),
   ],
 
