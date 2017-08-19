@@ -17,8 +17,7 @@ module.exports = merge(config, {
   },
 
   entry: {
-    main: ['babel-polyfill', './main'],
-    admin: ['babel-polyfill', './admin'],
+    main: ['babel-polyfill', 'react-hot-loader/patch', './main'],
   },
 
   output: {

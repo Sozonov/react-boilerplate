@@ -4,7 +4,7 @@
   "description": "",
   "main": "home.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "start": "webpack-dev-server --inline",
     "build": "cross-env NODE_ENV=production webpack",
     "build-dll": "cross-env NODE_ENV=production webpack --config webpack/dll.config.js"
   },
