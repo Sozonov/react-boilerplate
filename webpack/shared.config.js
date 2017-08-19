@@ -25,7 +25,9 @@ const config = {
       containers: path.resolve(SRC_DIR, 'containers'),
       atoms: path.resolve(SRC_DIR, 'ui/atoms'),
       molecules: path.resolve(SRC_DIR, 'ui/molecules'),
+      icons: path.resolve(SRC_DIR, 'icons'),
     },
+    extensions: ['.js', '.svg'],
   },
 
   plugins: [
@@ -59,6 +61,23 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              svgo: {
+                plugins: [{ removeTitle: false }],
+                floatPrecision: 2,
+              },
+            },
+          },
+        ],
       },
     ],
   },

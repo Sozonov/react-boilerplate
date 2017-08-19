@@ -12,7 +12,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
-    "recompose": "^0.25.0"
+    "recompose": "^0.25.0",
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
     "add-asset-html-webpack-plugin": "^2.1.1",
@@ -37,6 +38,7 @@
     "eslint-config-atomix-react": "^2.1.0",
     "html-webpack-plugin": "^2.30.1",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-svg-loader": "^1.1.1",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1",
