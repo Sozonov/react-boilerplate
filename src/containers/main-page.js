@@ -25,7 +25,10 @@ export default class MainPage extends Component {
     render() {
       const { isLoading } = this.state
       return (
-        <Molecule1WithLoading isLoading={isLoading} />
+        <div>
+          <h1>Main page</h1>
+          <Molecule1WithLoading isLoading={isLoading} />
+        </div>
       )
     }
 }

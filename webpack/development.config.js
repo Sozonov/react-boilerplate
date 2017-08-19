@@ -34,5 +34,6 @@ module.exports = merge(config, {
   devServer: {
     contentBase: `${BUILD_DIR}/../dll`,
     hot: true,
+    historyApiFallback: true,
   },
 })

@@ -1,4 +1,5 @@
+* SPA, Router (сделать, чтоб webpack dev server отдавал всегда index.html)
 * Sass с выносом в css файл
 * SVG
 * Шрифты
-* SPA, Router (сделать, чтоб webpack dev server отдавал всегда index.html)
+* Описать в readme по конфигурации вебпак (пока помню)
