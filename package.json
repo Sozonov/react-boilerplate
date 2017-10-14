@@ -9,7 +9,8 @@
     "build-dll":
       "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
     "lint": "eslint \"src/**/*.js\"",
-    "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\""
+    "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\"",
+    "flow": "flow"
   },
   "author": "Anton Sozonov",
   "license": "MIT",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "add-asset-html-webpack-plugin": "^2.1.2",
     "assets-webpack-plugin": "^3.5.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
@@ -38,11 +40,13 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "eslint": "^4.8.0",
     "eslint-config-atomix-react": "^3.2.0",
+    "flow-bin": "^0.57.2",
     "html-webpack-plugin": "^2.30.1",
     "react-svg-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",

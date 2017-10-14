@@ -1,11 +1,17 @@
+// @flow
 import React from 'react'
 
-const repos = [
-  { id: 1, name: 'react', html_url: 'http://react' },
-  { id: 2, name: 'redux', html_url: 'http://redux' }
-]
+export type Repository = {
+  id: number,
+  name: string,
+  html_url: string
+}
 
-const ReposList = () => (
+type Props = {
+  repos: Repository[]
+}
+
+const ReposList = ({ repos }: Props) => (
   <div>
     <h1>Popular js repositories from github</h1>
     {repos.map(repo => (
@@ -18,8 +24,5 @@ const ReposList = () => (
     ))}
   </div>
 )
-
-ReposList.propTypes = {}
-ReposList.defaultProps = {}
 
 export default ReposList

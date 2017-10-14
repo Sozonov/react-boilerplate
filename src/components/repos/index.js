@@ -1,3 +1,3 @@
-import List from './repos-list'
+import List from './repos-list-connector'
 
 export default List
