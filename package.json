@@ -6,17 +6,21 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "cross-env NODE_ENV=production webpack",
-    "build-dll": "cross-env NODE_ENV=production webpack --config webpack/dll.config.js"
+    "build-dll":
+      "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
+    "lint": "eslint \"src/**/*.js\"",
+    "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\""
   },
   "author": "Anton Sozonov",
   "license": "MIT",
   "dependencies": {
+    "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.0.0",
     "react-router-dom": "^4.2.2",
     "recompose": "^0.26.0",
-    "styled-components": "^2.2.1",
-    "react-hot-loader": "^3.0.0"
+    "styled-components": "^2.2.1"
   },
   "devDependencies": {
     "add-asset-html-webpack-plugin": "^2.1.2",

@@ -1,4 +1,6 @@
 {
-    "eslint.enable": true,
-    "eslint.autoFixOnSave": true
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "editor.formatOnSave": true
 }

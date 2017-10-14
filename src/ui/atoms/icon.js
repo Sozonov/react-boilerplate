@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import * as icons from 'icons'
 
-
 const Loading = ({ name, size }) => {
   const Svg = icons[name] || null
   return <Svg width={size} height={size} />
@@ -11,10 +10,10 @@ const Loading = ({ name, size }) => {
 
 Loading.propTypes = {
   name: PropTypes.oneOf(['spinner']).isRequired,
-  size: PropTypes.number,
+  size: PropTypes.number
 }
 Loading.defaultProps = {
-  size: 24,
+  size: 24
 }
 
 export default Loading

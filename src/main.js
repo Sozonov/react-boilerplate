@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './app'
 
-
 const entry = document.getElementById('app')
 const env = process.env.NODE_ENV || 'development'
 
@@ -21,16 +20,12 @@ const renderDev = () => {
 }
 
 const render = () => {
-  ReactDOM.render(
-    <App />,
-    entry
-  )
+  ReactDOM.render(<App />, entry)
 }
 
 if (env === 'development') {
   renderDev()
-}
-else {
+} else {
   render()
 }
 
