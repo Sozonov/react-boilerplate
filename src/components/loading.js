@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Icon from 'atoms/icon'
+import Icon from 'components/icon'
 
 const Wrapper = styled.span`
   text-align: center;

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import * as icons from 'icons'
+import * as icons from 'components/icons'
 
 const Loading = ({ name, size }) => {
   const Svg = icons[name] || null

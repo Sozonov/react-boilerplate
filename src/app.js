@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import MainPage from 'containers/main-page'
-import AboutPage from 'containers/about'
+import MainPage from 'components/main-page'
+import ReposPage from 'components/repos'
 
 const App = () => (
   <div>
@@ -11,12 +11,12 @@ const App = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/repos">Repos</Link>
       </li>
     </ul>
     <hr />
     <Route exact path="/" component={MainPage} />
-    <Route path="/about" component={AboutPage} />
+    <Route path="/repos" component={ReposPage} />
   </div>
 )
 
