@@ -1,21 +1,15 @@
-# Шаблон для проекта на реакте. 
+# Starter kit for react applications. 
 
-## Как использовать
-`npm start` - запуск dev сервера (если запускается первый раз, то нужно сначала выполнить `npm run build-dll`)
+## How to use
+`npm start` - run dev server (if it is first run - run `npm run build-dll` before)
 
-`npm build-dll && npm build` - сборка проекта
-
-
-## На борту:
-- HMR
-- Общие библиотеки вынесены в отдельный js файл (DLLPlugin)
-- Генерация html из шаблона и инжект туда актуальных версий js хэшами
-- SVG файлы
-- Нету всяких saas, less, css. Предполагается юзать styled-components
+`npm build-dll && npm build` - make production build
 
 
-## Нужно сделать:
-- Добавить тесты на jest со снэпшотами
-- Проверить какие библиотеки попадают в основной js и если есть что то из node_modules - вынести их в vendor.js
-- Проверить, что из-за AppContainer в сборку не prod сборку не попадет HMR
-- Разобраться почему vscode ругается на src/icons/index.js
+## We have:
+- React 16
+- Hot module replacement
+- Flow
+- Vendor libs extracted to separate js (webpack-dll-plugin)
+- svg
+- styled-components
