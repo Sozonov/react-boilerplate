@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "cross-env NODE_ENV=production webpack",
-    "build-dll":
-      "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
+    "build-dll": "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
     "lint": "eslint \"src/**/*.js\"",
     "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\"",
     "flow": "flow"
@@ -15,6 +14,7 @@
   "author": "Anton Sozonov",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

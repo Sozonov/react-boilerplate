@@ -21,6 +21,7 @@
     "import/newline-after-import": 0,
     "comma-dangle": 0,
     "jsx-a11y/anchor-is-valid": 0,
-    "brace-style": 0
+    "brace-style": 0,
+    "function-paren-newline": 0
   }
 }
