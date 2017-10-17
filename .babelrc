@@ -17,7 +17,7 @@
       ]
     },
     "development": {
-      "plugins": ["react-hot-loader/babel", "styled-name"]
+      "plugins": ["styled-name"]
     }
   }
 }
