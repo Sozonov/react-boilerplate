@@ -7,26 +7,25 @@ const merge = require('webpack-merge')
 const { config } = require('./shared.config')
 const { BUILD_DIR } = require('./consts.js')
 
-
 module.exports = merge(config, {
-  devtool: 'cheap-eval-source-map',
+  devtool: 'source-map',
   profile: false,
 
   watchOptions: {
-    aggregateTimeout: 100,
+    aggregateTimeout: 100
   },
 
   entry: {
-    main: ['babel-polyfill', 'react-hot-loader/patch', './main'],
+    main: ['babel-polyfill', 'react-hot-loader/patch', './main']
   },
 
   output: {
     pathinfo: true,
-    filename: '[name].dev.js',
+    filename: '[name].dev.js'
   },
 
   performance: {
-    hints: false,
+    hints: false
   },
 
   plugins: [new webpack.HotModuleReplacementPlugin()],
@@ -34,6 +33,6 @@ module.exports = merge(config, {
   devServer: {
     contentBase: `${BUILD_DIR}/../dll`,
     hot: true,
-    historyApiFallback: true,
-  },
+    historyApiFallback: true
+  }
 })
