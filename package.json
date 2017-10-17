@@ -46,7 +46,7 @@
     "clean-webpack-plugin": "^0.1.17",
     "eslint": "^4.8.0",
     "eslint-config-atomix-react": "^3.2.0",
-    "flow-bin": "^0.57.2",
+    "flow-bin": "^0.57.3",
     "html-webpack-plugin": "^2.30.1",
     "react-svg-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
