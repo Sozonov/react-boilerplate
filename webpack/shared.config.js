@@ -26,11 +26,6 @@ const config = {
     new webpack.NoEmitOnErrorsPlugin(),
     new CleanWebpackPlugin(['build'], { root: `${BUILD_DIR}./..` }),
     new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) }),
-    new HtmlWebpackPlugin({
-      filename: 'admin.html',
-      chunks: ['admin'],
-      title: 'Admin page'
-    }),
     new webpack.DllReferencePlugin({
       context: SRC_DIR,
       manifest: require('./../dll/vendor-manifest.json') // eslint-disable-line
