@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
+import Loading from 'components/loading/full-page-loader'
 import ReposList from 'components/repos/repos-list'
-import Loading from 'components/loading'
 import { getPopular } from 'api/repos'
 import type { Repository } from 'api/repos'
 

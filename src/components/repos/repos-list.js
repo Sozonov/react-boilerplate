@@ -4,12 +4,20 @@ import styled from 'styled-components'
 import type { Repository } from 'api/repos'
 
 const Repo = styled.div`
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid gray;
-  &:hover {
-    background-color: lightgray;
+  font-family: Consolas, Courier, monospace;
+  color: #333;
+  background: rgb(250, 250, 250);
+  margin: 10px 0;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  a,
+  a:visited {
+    color: #265778;
+    text-decoration: none;
   }
+`
+const Cont = styled.div`
+  text-align: center;
 `
 
 type Props = {
@@ -17,7 +25,7 @@ type Props = {
 }
 
 const ReposList = ({ repos }: Props) => (
-  <div>
+  <Cont>
     <h1>Popular js repositories from github</h1>
     {repos.map(repo => (
       <Repo>
@@ -27,7 +35,7 @@ const ReposList = ({ repos }: Props) => (
         </a>
       </Repo>
     ))}
-  </div>
+  </Cont>
 )
 
 export default ReposList
