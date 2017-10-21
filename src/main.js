@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
@@ -15,11 +16,13 @@ const renderDev = () => {
         <App />
       </Router>
     </AppContainer>,
+    // flow-ignore
     entry
   )
 }
 
 const render = () => {
+  // flow-ignore
   ReactDOM.render(<App />, entry)
 }
 
@@ -30,5 +33,6 @@ if (env === 'development') {
 }
 
 if (module.hot) {
+  // flow-ignore
   module.hot.accept('./app', renderDev)
 }

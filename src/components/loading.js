@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import styled from 'styled-components'
 import Icon from 'components/icon'
@@ -15,8 +16,5 @@ const Loading = () => (
     <br />
   </Wrapper>
 )
-
-Loading.propTypes = {}
-Loading.defaultProps = {}
 
 export default Loading

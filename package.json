@@ -6,10 +6,12 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "cross-env NODE_ENV=production webpack",
-    "build-dll": "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
+    "build-dll":
+      "cross-env NODE_ENV=production webpack --config webpack/dll.config.js",
     "lint": "eslint \"src/**/*.js\"",
     "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\"",
-    "flow": "flow"
+    "flow": "flow",
+    "flow-coverage": "flow-coverage-report -i \"src/**/*.js\""
   },
   "author": "Anton Sozonov",
   "license": "MIT",
@@ -47,6 +49,7 @@
     "eslint": "^4.8.0",
     "eslint-config-atomix-react": "^3.2.0",
     "flow-bin": "^0.57.3",
+    "flow-coverage-report": "^0.3.0",
     "html-webpack-plugin": "^2.30.1",
     "react-svg-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",

@@ -1,17 +1,18 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
+import icons from 'components/icons'
+import type { iconTypes } from 'components/icons'
 
-import * as icons from 'components/icons'
+type Props = {
+  name: iconTypes,
+  size?: number
+}
 
-const Loading = ({ name, size }) => {
-  const Svg = icons[name] || null
+const Loading = ({ name, size }: Props) => {
+  const Svg = icons[name]
   return <Svg width={size} height={size} />
 }
 
-Loading.propTypes = {
-  name: PropTypes.oneOf(['spinner']).isRequired,
-  size: PropTypes.number
-}
 Loading.defaultProps = {
   size: 24
 }
