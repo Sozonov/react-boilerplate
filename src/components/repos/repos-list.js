@@ -28,7 +28,7 @@ const ReposList = ({ repos }: Props) => (
   <Cont>
     <h1>Popular js repositories from github</h1>
     {repos.map(repo => (
-      <Repo>
+      <Repo key={repo.id}>
         <b>{repo.name}</b> <br />
         <a href={repo.html_url} target="_blank">
           {repo.html_url}
