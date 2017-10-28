@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react'
-// flow-ignore
-import spinner from './spinner'
+import spinner from './spinner.svg'
 
 export type iconTypes = 'spinner' | 'foo'
 
+// flow-ignore
 const icons: { [iconTypes]: React.ComponentType<*> } = { spinner }
 export default icons

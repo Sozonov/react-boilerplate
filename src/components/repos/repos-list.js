@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import type { Repository } from 'api/repos'
 
-const Repo = styled.div`
+const RepoSt = styled.div`
   font-family: Consolas, Courier, monospace;
   color: #333;
   background: rgb(250, 250, 250);
@@ -16,6 +16,16 @@ const Repo = styled.div`
     text-decoration: none;
   }
 `
+
+export const Repo = ({ repo }: { repo: Repository }) => (
+  <RepoSt key={repo.id}>
+    <b>{repo.name}</b> <br />
+    <a href={repo.html_url} target="_blank">
+      {repo.html_url}
+    </a>
+  </RepoSt>
+)
+
 const Cont = styled.div`
   text-align: center;
 `
@@ -27,14 +37,7 @@ type Props = {
 const ReposList = ({ repos }: Props) => (
   <Cont>
     <h1>Popular js repositories from github</h1>
-    {repos.map(repo => (
-      <Repo>
-        <b>{repo.name}</b> <br />
-        <a href={repo.html_url} target="_blank">
-          {repo.html_url}
-        </a>
-      </Repo>
-    ))}
+    {repos.map(repo => <Repo repo={repo} key={repo.id} />)}
   </Cont>
 )
 

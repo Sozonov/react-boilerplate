@@ -18,6 +18,9 @@
     },
     "development": {
       "plugins": ["styled-name"]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
     }
   }
 }
