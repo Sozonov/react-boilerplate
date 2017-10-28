@@ -8,13 +8,13 @@ type Props = {
   size?: number
 }
 
-const Loading = ({ name, size }: Props) => {
+const Icon = ({ name, size }: Props) => {
   const Svg = icons[name]
   return <Svg width={size} height={size} />
 }
 
-Loading.defaultProps = {
+Icon.defaultProps = {
   size: 24
 }
 
-export default Loading
+export default Icon
